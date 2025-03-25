@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">تطبيقي</string>
+    <string name="create_your_study_plan">أنشئ خطة دراستك الخاصة</string>
+    <string name="study_plan_desc">ادرس وفقًا لخطة الدراسة، اجعل الدراسة أكثر تحفيزًا</string>
+    <string name="sign_up">التسجيل</string>
+    <string name="log_in">تسجيل الدخول</string>
+    <string name="enter_details">أدخل تفاصيلك أدناه</string>
+    <string name="your_email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="forgot_password">هل نسيت كلمة المرور؟</string>
+    <string name="create_account">إنشاء حساب</string>
+    <string name="agree_terms">من خلال إنشاء حساب، أنت توافق على شروطنا وأحكامنا.</string>
+    <string name="already_have_account">هل لديك حساب بالفعل؟</string>
+    <string name="login_with">أو تسجيل الدخول باستخدام</string>
+    <string name="dont_have_account">ليس لديك حساب؟</string>
+    <string name="skip">تخطي</string>
+    <string name="numerous_free_courses">دورات تجريبية مجانية عديدة</string>
+    <string name="free_courses_description">دورات مجانية لك لتجد طريقك للتعلم</string>
+    <string name="quick_easy_learning">تعلم سريع وسهل</string>
+    <string name="quick_easy_learning_description">تعلم سريع وسهل في أي وقت لمساعدتك في تحسين مهاراتك المختلفة</string>
+</resources>
