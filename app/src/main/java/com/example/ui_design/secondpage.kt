@@ -1,9 +1,6 @@
 package com.example.ui_design
 
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.fadeOut
@@ -11,6 +8,7 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.with
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -24,11 +22,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
@@ -56,6 +52,9 @@ fun secondpage(navController: NavController) {
                             text = stringResource(id = R.string.skip),
                             color = Color.Gray,
                             modifier = Modifier
+                                .clickable {
+                                    navController.navigate("signUp")
+                                }
                                 .align(Alignment.End)
                                 .padding(16.dp)
                         )
@@ -83,6 +82,7 @@ fun secondpage(navController: NavController) {
                             onClick = { currentScreen = "thirdScreen" },
                             modifier = Modifier.padding(top = 16.dp)
                         ) {
+                            Text(text = stringResource(id = R.string.Next),)
                         }
                     }
                 }

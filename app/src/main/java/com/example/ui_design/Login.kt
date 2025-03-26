@@ -19,7 +19,6 @@ import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Checkbox
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalTextStyle
@@ -103,7 +102,7 @@ fun Login(navController: NavController) {
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(12.dp)),
-                    textStyle = LocalTextStyle.current.copy(fontSize = 14.sp),
+                    textStyle = LocalTextStyle.current.copy(fontSize = 18.sp,color = Color.White),
                     colors = TextFieldDefaults.colors(
                         unfocusedContainerColor = Color(0xFF2F3458),
                         focusedContainerColor = Color(0xFF2F3458),
@@ -126,7 +125,7 @@ fun Login(navController: NavController) {
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(12.dp)),
-                    textStyle = LocalTextStyle.current.copy(fontSize = 14.sp),
+                    textStyle = LocalTextStyle.current.copy(fontSize = 18.sp,color = Color.White),
                     visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                     trailingIcon = {
                         val image =
@@ -200,17 +199,17 @@ fun Login(navController: NavController) {
                         .fillMaxWidth(),
                     horizontalArrangement = Arrangement.Center
                 ) {
-                    IconButton(onClick = { /* Google login logic */ }) {
+                    IconButton(onClick = { }) {
                         Icon(
-                            painter = painterResource(id = R.drawable.ic_google), // Replace with your Google icon
+                            painter = painterResource(id = R.drawable.ic_google),
                             contentDescription = "Google Login",
-                            tint = Color.Unspecified // Keeps original icon color
+                            tint = Color.Unspecified
                         )
                     }
                     Spacer(modifier = Modifier.width(16.dp))
-                    IconButton(onClick = { /* Facebook login logic */ }) {
+                    IconButton(onClick = { }) {
                         Icon(
-                            painter = painterResource(id = R.drawable.ic_facebook), // Replace with your Facebook icon
+                            painter = painterResource(id = R.drawable.ic_facebook),
                             contentDescription = "Facebook Login",
                             tint = Color.Unspecified
                         )

@@ -107,7 +107,7 @@ fun signUp(navController: NavController) {
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(12.dp)),
-                    textStyle = LocalTextStyle.current.copy(fontSize = 14.sp),
+                    textStyle = LocalTextStyle.current.copy(fontSize = 18.sp,color = Color.White),
                     colors = TextFieldDefaults.colors(
                         unfocusedContainerColor = Color(0xFF2F3458),
                         focusedContainerColor = Color(0xFF2F3458),
@@ -115,7 +115,7 @@ fun signUp(navController: NavController) {
                     )
                 )
 
-                Spacer(modifier = Modifier.height(12.dp)) // Slightly reduced space
+                Spacer(modifier = Modifier.height(12.dp))
                 Text(
                     text = stringResource(id = R.string.password),
                     modifier = Modifier.padding(horizontal = 16.dp),
@@ -128,7 +128,7 @@ fun signUp(navController: NavController) {
                         .padding(horizontal = 16.dp)
                         .fillMaxWidth()
                         .clip(RoundedCornerShape(12.dp)),
-                    textStyle = LocalTextStyle.current.copy(fontSize = 14.sp),
+                    textStyle = LocalTextStyle.current.copy(fontSize = 18.sp,color = Color.White),
                     visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                     trailingIcon = {
                         val image =
@@ -148,13 +148,13 @@ fun signUp(navController: NavController) {
 
                 )
 
-                Spacer(modifier = Modifier.height(12.dp)) // Slightly reduced space
+                Spacer(modifier = Modifier.height(12.dp))
 
                 Button(
                     onClick = {},
                     modifier = Modifier
                         .padding(horizontal = 16.dp)
-                        .fillMaxWidth() // Ensures button is same width as TextField
+                        .fillMaxWidth()
                         .clip(RoundedCornerShape(12.dp)),
                     colors = ButtonDefaults.buttonColors(containerColor = Color.Blue)
                 ) {
@@ -164,7 +164,7 @@ fun signUp(navController: NavController) {
                     )
                 }
 
-                Spacer(modifier = Modifier.height(12.dp)) // Slightly reduced space
+                Spacer(modifier = Modifier.height(12.dp))
 
                 Row(
                     verticalAlignment = Alignment.CenterVertically
@@ -179,7 +179,7 @@ fun signUp(navController: NavController) {
                     )
                 }
 
-                Spacer(modifier = Modifier.height(12.dp)) // Slightly reduced space
+                Spacer(modifier = Modifier.height(12.dp))
 
                 Row(
                     modifier = Modifier
@@ -190,7 +190,7 @@ fun signUp(navController: NavController) {
                     Text(
                         text = stringResource(id = R.string.dont_have_account),
                         color = Color.Gray)
-                    Spacer(modifier = Modifier.width(4.dp)) // Reduced space between texts
+                    Spacer(modifier = Modifier.width(4.dp))
                     Text(
                         text = stringResource(id = R.string.log_in),
 

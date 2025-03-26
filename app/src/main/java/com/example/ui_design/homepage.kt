@@ -1,8 +1,6 @@
 package com.example.ui_design
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
+
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.fadeOut
@@ -10,6 +8,7 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.with
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -23,7 +22,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -31,10 +29,11 @@ import androidx.navigation.NavController
 @OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun HomeScreen(navController: NavController) {
-    var currentScreen by remember { mutableStateOf<String>("homeScreen") } // Explicitly declare type
+    var currentScreen by remember { mutableStateOf<String>("homeScreen") }
 
     Box(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
             .background(Color(0xFF13152C)),
         contentAlignment = Alignment.Center
     ) {
@@ -47,12 +46,20 @@ fun HomeScreen(navController: NavController) {
                         Column(
                             horizontalAlignment = Alignment.CenterHorizontally,
                             verticalArrangement = Arrangement.Center,
-                            modifier = Modifier.fillMaxSize().padding(16.dp)
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(16.dp)
                         ) {
                             Text(
                                 text = stringResource(id = R.string.skip),
                                 color = Color.Gray,
-                                modifier = Modifier.align(Alignment.End)
+                                modifier = Modifier
+                                    .clickable {
+                                        navController.navigate("signUp")
+                                    }
+                                    .align(Alignment.End)
+
+
                             )
                             Image(
                                 painter = painterResource(id = R.drawable.home),
@@ -76,9 +83,11 @@ fun HomeScreen(navController: NavController) {
                                 onClick = { currentScreen = "secondpage" },
                                 modifier = Modifier.padding(top = 16.dp)
                             ) {
+                                Text(text = stringResource(id = R.string.Next))
                             }
                         }
                     }
+
                     "secondpage" -> secondpage(navController)
                 }
             }
