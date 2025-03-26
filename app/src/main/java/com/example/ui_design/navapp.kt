@@ -10,7 +10,9 @@ import androidx.navigation.compose.rememberNavController
 fun AppNavHost() {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = "thirdScreen") {
+    NavHost(navController = navController, startDestination = "HomeScreen") {
+        composable("HomeScreen") { HomeScreen(navController) }
+        composable("secondpage") { secondpage(navController) }
         composable("thirdScreen") { thirdScreen(navController) }
         composable("login") { Login(navController) }
         composable("signup") { signUp(navController) }
